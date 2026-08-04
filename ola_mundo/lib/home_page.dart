@@ -20,9 +20,60 @@ class HomePageState extends State<HomePage> {
             CustomSwitch(),
           ],
         ),
-        body: Column(children: [
-          Text('Contador: $counter', style: TextStyle(fontSize: 32)),
-        ]),
+        body: Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: ListView(
+              // List View para permitir rolagem quando houver muitos elementos que ultrapassam a tela
+              //mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Contador: $counter', style: TextStyle(fontSize: 32)),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Container(height: 20),
+                CustomSwitch(),
+                Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.red,
+                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.green,
+                      ),
+                      Container(
+                        width: 100,
+                        height: 100,
+                        color: Colors.blue,
+                      )
+                    ])
+              ]),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
