@@ -1,0 +1,71 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String email = '';
+  String password = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+        child: SingleChildScrollView(
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextField(
+                onChanged: (text) {
+                  email = text;
+                },
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+
+              SizedBox(height: 20.0), // Espaço entre os campos de texto
+              TextField(
+                onChanged: (text) {
+                  password = text;
+                },
+                obscureText: true,
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+
+              SizedBox(
+                  height: 20.0), // Espaço entre os campos de texto e o botão
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    minimumSize: Size(double.infinity, 48)),
+                onPressed: () {
+                  if (email == 'admin@admin.com' && password == 'admin') {
+                    print('Login bem-sucedido');
+                  } else {
+                    print('Login falhou');
+                  }
+                },
+                child: const Text('Entrar'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ));
+  }
+}

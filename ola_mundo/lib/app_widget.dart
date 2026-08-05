@@ -1,6 +1,7 @@
 import 'package:ola_mundo/app_controller.dart';
 import 'package:ola_mundo/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:ola_mundo/login_page.dart';
 
 class AppWidget extends StatelessWidget {
   //Stateles Não pode ser mudado
@@ -20,7 +21,7 @@ class AppWidget extends StatelessWidget {
                 ? Brightness.light
                 : Brightness.dark,
           ),
-          home: HomePage(),
+          home: LoginPage(),
         );
       },
     );
