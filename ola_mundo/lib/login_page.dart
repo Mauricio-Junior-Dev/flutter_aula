@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:ola_mundo/home_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -15,8 +15,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-        child: SingleChildScrollView(
+    return Scaffold(
+        body: SingleChildScrollView(
       child: SizedBox(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -55,7 +55,9 @@ class _LoginPageState extends State<LoginPage> {
                     minimumSize: Size(double.infinity, 48)),
                 onPressed: () {
                   if (email == 'admin@admin.com' && password == 'admin') {
-                    print('Login bem-sucedido');
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ));
                   } else {
                     print('Login falhou');
                   }
