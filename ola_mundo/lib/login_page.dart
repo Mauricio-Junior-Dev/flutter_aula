@@ -55,9 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                     minimumSize: Size(double.infinity, 48)),
                 onPressed: () {
                   if (email == 'admin@admin.com' && password == 'admin') {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => HomePage(),
-                    ));
+                    Navigator.of(context).pushReplacementNamed('/home');
                   } else {
                     print('Login falhou');
                   }
