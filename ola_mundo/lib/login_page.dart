@@ -26,8 +26,8 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                child: Image.network(
-                  'https://img.cdndsgni.com/preview/13356932.jpg',
+                child: Image.asset(
+                  'assets/images/anubis.png',
                   width: 200,
                   height: 200,
                 ),
