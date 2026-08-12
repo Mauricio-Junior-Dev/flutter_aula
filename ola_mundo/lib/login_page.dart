@@ -35,43 +35,57 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20.0, // Espaço entre a imagem e os campos de texto
               ),
 
-              TextField(
-                onChanged: (text) {
-                  email = text;
-                },
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  labelText: 'Email',
-                  border: OutlineInputBorder(),
-                ),
-              ),
+              Card(
+                  child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 12, right: 12, top: 20, bottom: 12),
+                child: Column(
+                  children: [
+                    TextField(
+                      onChanged: (text) {
+                        email = text;
+                      },
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
 
-              SizedBox(height: 20.0), // Espaço entre os campos de texto
-              TextField(
-                onChanged: (text) {
-                  password = text;
-                },
-                obscureText: true,
-                decoration: InputDecoration(
-                  labelText: 'Password',
-                  border: OutlineInputBorder(),
+                    SizedBox(height: 20.0), // Espaço entre os campos de texto
+                    TextField(
+                      onChanged: (text) {
+                        password = text;
+                      },
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                    SizedBox(height: 20.0),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.lightBlue,
+                          minimumSize: Size(double.infinity, 48)),
+                      onPressed: () {
+                        if (email == 'admin@admin.com' && password == 'admin') {
+                          Navigator.of(context).pushReplacementNamed('/home');
+                        } else {
+                          print('Login falhou');
+                        }
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        child: Text('Entrar',
+                            textAlign: TextAlign.center,
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 16)),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-
-              SizedBox(
-                  height: 20.0), // Espaço entre os campos de texto e o botão
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    minimumSize: Size(double.infinity, 48)),
-                onPressed: () {
-                  if (email == 'admin@admin.com' && password == 'admin') {
-                    Navigator.of(context).pushReplacementNamed('/home');
-                  } else {
-                    print('Login falhou');
-                  }
-                },
-                child: const Text('Entrar'),
-              ),
+              )), // Espaço entre os campos de texto e o botão
             ],
           ),
         ),
