@@ -27,7 +27,7 @@ class HomePageState extends State<HomePage> {
               ),
               ListTile(
                 leading: Icon(Icons.home),
-                title: Text('Home Page', style: TextStyle(fontSize: 20)),
+                title: Text('Home', style: TextStyle(fontSize: 20)),
                 subtitle: Text('Subtitulo'),
                 onTap: () {
                   print('Home Page');
@@ -41,11 +41,19 @@ class HomePageState extends State<HomePage> {
                   Navigator.of(context).pushReplacementNamed('/');
                 },
               ),
+              ListTile(
+                leading: Icon(Icons.money),
+                title: Text('Desafio', style: TextStyle(fontSize: 20)),
+                subtitle: Text('page'),
+                onTap: () {
+                  Navigator.of(context).pushReplacementNamed('/desafio');
+                },
+              ),
             ],
           ),
         ),
         appBar: AppBar(
-          title: Text('Home Page', style: TextStyle(fontSize: 20)),
+          title: Text('Home', style: TextStyle(fontSize: 20)),
           actions: [
             CustomSwitch(),
           ],

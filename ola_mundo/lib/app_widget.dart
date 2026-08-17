@@ -2,6 +2,7 @@ import 'package:ola_mundo/app_controller.dart';
 import 'package:ola_mundo/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:ola_mundo/login_page.dart';
+import 'package:ola_mundo/desafio.dart';
 
 class AppWidget extends StatelessWidget {
   //Stateles Não pode ser mudado
@@ -15,6 +16,7 @@ class AppWidget extends StatelessWidget {
       animation: AppController.instance,
       builder: (context, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primarySwatch: Colors.blue,
             brightness: AppController.instance.isLightTheme
@@ -25,6 +27,7 @@ class AppWidget extends StatelessWidget {
           routes: {
             '/': (context) => LoginPage(),
             '/home': (context) => HomePage(),
+            '/desafio': (context) => DesafioPage(),
           },
         );
       },
