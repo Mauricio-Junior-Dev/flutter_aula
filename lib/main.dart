@@ -25,7 +25,27 @@ class MeuApp extends StatelessWidget {
                     fontSize: 40,
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    ),
+                    fontFamily: 'Pacifico'),
+              ),
+              Column(
+                children: [
+                  Text(
+                    'DESENVOLVEDOR WEB',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontFamily: 'Source',
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'FULLSTACK',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontFamily: 'Source',
+                        fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
             ],
           ),
