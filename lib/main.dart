@@ -27,25 +27,71 @@ class MeuApp extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontFamily: 'Pacifico'),
               ),
-              Column(
-                children: [
-                  Text(
-                    'DESENVOLVEDOR WEB',
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
+              Text(
+                'DESENVOLVEDOR WEB',
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontFamily: 'Source',
+                    fontWeight: FontWeight.bold),
+              ),
+              Text(
+                'FULLSTACK',
+                style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                    fontFamily: 'Source',
+                    fontWeight: FontWeight.bold),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      size: 25,
+                      color: Colors.lightBlue,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '+55 11 99999-9999',
+                      style: TextStyle(
                         fontFamily: 'Source',
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    'FULLSTACK',
-                    style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
+                        fontSize: 20,
+                        color: Colors.lightBlue,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                padding: EdgeInsets.all(10),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.mail,
+                      size: 25,
+                      color: Colors.lightBlue,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '+email@email.com',
+                      style: TextStyle(
                         fontFamily: 'Source',
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
+                        fontSize: 20,
+                        color: Colors.lightBlue,
+                      ),
+                    )
+                  ],
+                ),
               ),
             ],
           ),
