@@ -28,9 +28,9 @@ class Calculadora extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 500,
+              height: 600,
               color: Colors.black,
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.all(5),
               child: GridView.count(
                 crossAxisCount: 4,
                 children: List.generate(botoes.length, (index) {
@@ -55,9 +55,11 @@ class Calculadora extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: corDoBotao, // Cor de fundo
                         foregroundColor: Colors.white, // Cor do texto/ícone
+                        minimumSize: const Size(double.infinity,
+                            double.infinity), // Ocupa todo o espaço disponível
                       ),
                       child: Text(
-                        style: TextStyle(fontSize: 25),
+                        style: TextStyle(fontSize: 28),
                         botao,
                       ),
                     ),
