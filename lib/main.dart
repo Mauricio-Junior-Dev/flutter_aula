@@ -1,7 +1,8 @@
+import 'package:aula80/calculadora.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MeuApp());
+  runApp(Calculadora());
 }
 
 class MeuApp extends StatelessWidget {
