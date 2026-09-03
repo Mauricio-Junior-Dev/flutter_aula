@@ -12,6 +12,7 @@ class MeuApp extends StatelessWidget {
         backgroundColor: Colors.lightBlue,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 50,
@@ -43,54 +44,47 @@ class MeuApp extends StatelessWidget {
                     fontFamily: 'Source',
                     fontWeight: FontWeight.bold),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      size: 25,
-                      color: Colors.lightBlue,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '+55 11 99999-9999',
-                      style: TextStyle(
-                        fontFamily: 'Source',
-                        fontSize: 20,
-                        color: Colors.lightBlue,
-                      ),
-                    )
-                  ],
+              SizedBox(
+                height: 20,
+                width: 250,
+                child: Divider(
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail,
-                      size: 25,
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    size: 25,
+                    color: Colors.lightBlue,
+                  ),
+                  title: Text(
+                    '+55 11 99999-9999',
+                    style: TextStyle(
+                      fontFamily: 'Source',
+                      fontSize: 20,
                       color: Colors.lightBlue,
                     ),
-                    SizedBox(
-                      width: 10,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    size: 25,
+                    color: Colors.lightBlue,
+                  ),
+                  title: Text(
+                    'email@email.com',
+                    style: TextStyle(
+                      fontFamily: 'Source',
+                      fontSize: 20,
+                      color: Colors.lightBlue,
                     ),
-                    Text(
-                      '+email@email.com',
-                      style: TextStyle(
-                        fontFamily: 'Source',
-                        fontSize: 20,
-                        color: Colors.lightBlue,
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
             ],
