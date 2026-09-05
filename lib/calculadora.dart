@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Calculadora extends StatelessWidget {
+class Calculadora extends StatefulWidget {
+  @override
+  _CalculadoraState createState() => _CalculadoraState();
+}
+
+String visor = 'Digite um numero'; // Variável para armazenar o valor do visor
+
+class _CalculadoraState extends State<Calculadora> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,7 +28,7 @@ class Calculadora extends StatelessWidget {
               margin: EdgeInsets.all(15),
               child: Center(
                 child: Text(
-                  'Visor',
+                  visor,
                   style: TextStyle(fontSize: 50),
                 ),
               ),
@@ -49,8 +56,9 @@ class Calculadora extends StatelessWidget {
                   return Center(
                     child: ElevatedButton(
                       onPressed: () {
-                        // Ação executada ao pressionar o botão
-                        print('Botão pressionado!');
+                        setState(() {
+                          visor += botao;
+                        });
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: corDoBotao, // Cor de fundo

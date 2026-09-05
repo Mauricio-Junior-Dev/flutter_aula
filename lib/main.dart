@@ -3,7 +3,7 @@ import 'package:aula80/dados.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Dados());
+  runApp(Calculadora());
 }
 
 class MeuApp extends StatelessWidget {
