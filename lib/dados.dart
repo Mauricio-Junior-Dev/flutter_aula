@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class Dados extends StatefulWidget {
   @override
@@ -8,6 +9,13 @@ class Dados extends StatefulWidget {
 class _DadosState extends State<Dados> {
   var numeroDadoEsquerdo = 1;
   var numeroDadoDireito = 2;
+
+  void gerarNumeroAleatorio() {
+    numeroDadoEsquerdo =
+        Random().nextInt(6) + 1; // Gera um número aleatório entre 1 e 6
+    numeroDadoDireito =
+        Random().nextInt(6) + 1; // Gera um número aleatório entre 1 e 6
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +37,8 @@ class _DadosState extends State<Dados> {
                   onPressed: () {
                     // Ação quando o botão for pressionado
                     setState(() {
-                    numeroDadoEsquerdo += 1;
-                    if (numeroDadoEsquerdo > 6) {
-                      numeroDadoEsquerdo = 1;
-
-                    }else if (numeroDadoEsquerdo < 1) {
-                      numeroDadoEsquerdo = 6;
-                    }
-                  });
+                      gerarNumeroAleatorio();
+                    });
                   },
                   child:
                       Image.asset('assets/dados/dado$numeroDadoEsquerdo.png'),
@@ -47,7 +49,7 @@ class _DadosState extends State<Dados> {
                   onPressed: () {
                     // Ação quando o botão for pressionado
                     setState(() {
-                      numeroDadoDireito = (numeroDadoDireito % 6) + 1;
+                      gerarNumeroAleatorio();
                     });
                   },
                   child: Image.asset('assets/dados/dado$numeroDadoDireito.png'),
